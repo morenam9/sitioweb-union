@@ -27,16 +27,61 @@ body {
     margin-top: 0px;
     margin-bottom: 5px;
     margin-left: 35px;
-    width: 150px;
-    height: 90px;
+    width: 120px;
+    height: 60px;
     position: relative;
 }
 
-.slider img {
-    width: 1560px;
-    height: 715px;
 
+/*Slider inicial*/
+
+.imagen-bienvenida-port{
+    width: 100%;
+    height: 375px;
+    /* margin-bottom: 10px; */
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
 }
+
+.imagen-bienvenida-port > img{
+    /* margin-top: 15px; */
+    width: 100%;
+    height: 375px;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-bienvenida{
+    position: absolute;
+    width: 100%;
+    height: 375px;
+    top: 0;
+    transform: scale(0);
+    background: hsla(0,0%,25.5%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-bienvenida img{
+    width: 50px;
+}
+
+.hover-bienvenida p{
+    font-size: 3em;
+    color: #fff;
+}
+
+.imagen-bienvenida-port:hover .hover-bienvenida{
+    transform: scale(1);
+}
+
+
+
 /* Header */
 
 header {
@@ -70,7 +115,7 @@ nav > a:hover{
 
 header .textos-header{
     display: flex;
-    height: 430px;
+    height: 230px;
     width: 100%;
     align-items: center;
     /*justify-content: center;*/
@@ -82,7 +127,9 @@ header .textos-header{
     font-size: 50px;
     color:#fff;
 }
-
+.contenido-textos h3 {
+    color: #2193b0;
+}
 
 
 /* About us */
@@ -96,9 +143,9 @@ main .sobre-nosotros{
 }
 
 .imagen-about-us{
-    margin-bottom: 45px;
-    width: 590px;
-    height: 520px;
+    margin-bottom: 55px;
+    width: 490px;
+    height: 490px;
 }
 
 .sobre-nosotros .contenido-textos{
@@ -108,6 +155,7 @@ main .sobre-nosotros{
 
 .contenido-textos h3{
     margin-bottom: 15px;
+    margin-left: 1px;
 }
 
 .contenido-textos h3 span{
@@ -124,7 +172,7 @@ main .sobre-nosotros{
 }
 
 .contenido-textos p{
-    padding: 0px 0px 30px 15px;
+    padding: 0px 0px 20px -15px;
     font-weight: 300;
     text-align: justify;
 }
